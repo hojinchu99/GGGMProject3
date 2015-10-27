@@ -1,0 +1,86 @@
+#wrapper{
+	border: 5px solid ;
+	width: 600px;
+	background-color: #996666;
+	margin: 0px auto;
+	border-radius:10px;
+	padding: 15px;
+	
+}
+#joinForm{
+	display: table;
+	margin: 80px auto;
+	border-collapse: collapse;
+
+}
+#joinForm p{
+	display: table-row;
+	padding: 5px;
+	
+	font-family: '서울한강체';
+	color:white;
+}
+#joinForm p label{
+	display: table-cell;
+	padding-left: 40px;
+	font-family: '서울한강체';
+	color:white;
+	
+}
+#joinForm .cellStyle{
+	display: table-cell;
+	padding-left: 5px;
+}
+#joinForm #userid,#joinForm #usermail{
+	width: 100px;
+}
+#joinForm #userpwd,#joinForm #userpwd2{
+	 width:80px;
+}
+#joinForm #username,#joinForm #usernum{
+	width: 100px;
+}
+#joinForm #useraddr1,#joinForm #useraddr2{
+	width: 250px;
+	display: block;
+}
+#joinForm input[type="text"],#joinForm input[type="password"],
+#joinForm input[type="radio"],#joinForm select{
+	background-color: #efefef;
+	border: 1px solid #996666;
+	padding: 3px;
+	margin: 5px;
+	width:60px;
+}
+
+#joinForm input[type="button"],#joinForm input[type="submit"]{
+	background-color: #fff;
+	border: 2px solid #996666;
+	padding: 3px 10px;
+	border-radius:20px;
+	font-family: '서울한강체';
+}
+#joinForm .btnSubmit{
+	display: block;
+	text-align: center;
+	position: relative;
+	left: 250px;
+	top:2px;
+	border-bottom-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

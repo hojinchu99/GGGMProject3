@@ -30,7 +30,7 @@ public class DispatcherServlet extends HttpServlet {
 			String cmd=request.getRequestURI();
 			cmd=cmd.substring(request.getContextPath().length()+1, cmd.lastIndexOf('.'));
 			Model model=wc.getBean(cmd);// 해당하는 ~Model클래스를 가져옴
-			System.out.println(cmd);
+			System.out.println("들어온 cmd 값:"+cmd);
 			String jsp=model.handlerRequest(request, response);
 			//해당 모델 클래스의 재정의된 메소드를 호출, request는 공유시킴
 			

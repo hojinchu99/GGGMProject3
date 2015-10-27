@@ -259,6 +259,23 @@ section.main_1 {
 	height: 22%;
 }
 </style>
+<script type="text/javascript" src="js/shadowbox.js"></script>
+<script type="text/javascript">
+Shadowbox.init({
+   players:["iframe"]		
+});
+function twojoin()
+{
+	Shadowbox.open({
+		content:'member/twojoin.jsp',
+		player:'iframe',
+		title:'회원가입',
+		width:650,
+		height:770
+		
+	});
+}
+</script>
 </head>
 <body>
 
@@ -277,7 +294,7 @@ section.main_1 {
 			<div id="loginMain">
 				<div id=signUp>
 					<input id="signupBtn" type="button" value="Sign Up Now"
-						onclick="join()">
+						onclick="twojoin()" style="position: absolute;top: 530px;right: 590px;">
 				</div>
 				<h3 id="mainHead">
 					광고를 보는 것만으로<br>돈을 벌 수 있다면?
@@ -352,7 +369,7 @@ section.main_1 {
 			<div id="page4">
 				<div id=signUp>
 					<input id="signupBtn" type="button" value="Sign Up Now"
-						onclick="join()">
+						onclick="twojoin()">
 				</div>
 				<h3 id="page4_1">
 					지금까지 없었던 서비스<br>당신이 선두입니다.

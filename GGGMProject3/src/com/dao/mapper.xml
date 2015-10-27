@@ -1,12 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mapper>
-	<select id="empAllData">
-		SELECT * FROM emp
-	</select>
-	<select id="empFindData">
-		SELECT * FROM emp WHERE empno=#{empno}
-	</select>
-	<select id="empFindDataByName">
-		SELECT * FROM emp WHERE ename=#{ename} AND empno=#{empno}
-	</select>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- PreparedStatement, ResultSet 설정하는 곳 -->
+<mapper namespace="com.dao.mapper"><!-- 경로 설정 -->
+   <!-- SELECT 문장만 넣을 수 있음  resultType=리턴형 parameterType=매개변수-->
+   <select id="idcheck" resultType="int" parameterType="java.lang.String">
+   		SELECT count(*) FROM memberData WHERE id=#{id}
+   </select>
+   <!-- 페이지별 데이터 가져오기 -->
+   <!-- public List<BoardDTO> boardListData(Map map){ } 
+   <select id="boardListData" resultType="Board" parameterType="java.util.Map">
+      SELECT no, subject, name, regdate, hit, num
+      FROM (SELECT no, subject, name, regdate, hit, rownum as num
+      FROM (SELECT no, subject, name, regdate, hit 
+      FROM replyBoard ORDER BY no DESC)) WHERE num BETWEEN #{start} AND #{end}
+   </select>-->
+   
+   <!-- 총페이지
+   <select id="boardRowCount" resultType="int">
+      SELECT COUNT(*) FROM replyBoard
+   </select> 여긴 별칭 없어도 됨 -->
+   
+   <!-- 게시물 추가
+   <insert id="boardInsert" parameterType="Board">
+      Sequence역할, insert를 하면서 select를 할 때 수행 
+      <selectKey keyProperty="no" resultType="int" order="BEFORE">밑의 no와 keyProperty가 일치해야 함
+         SELECT NVL(MAX(no)+1,1) as no FROM replyBoard
+      </selectKey> SELECT 먼저 하고 no를 받아 INSERT에 적용하여 출력 
+      INSERT INTO replyBoard 
+      VALUES(#{no}, #{name}, #{subject}, #{content}, #{pwd}, SYSDATE, 0)
+   </insert> -->
+   
+   <!-- 반복되는 SQL문장 처리
+   <sql id="where-no">
+      WHERE no=#{no}
+   </sql> -->
+   
+   <!-- 조회수 증가 
+   <update id="boardHitIncrement" parameterType="int">
+      UPDATE replyBoard SET hit=hit+1 <include refid="where-no"/>
+   </update>-->
+   <!-- 내용 보기 
+   <select id="boardContentData" resultType="Board" parameterType="int">
+      SELECT no, name, subject, content, regdate, hit FROM replyBoard <include refid="where-no"/>
+   </select>-->
+   
+   <!-- statementType="CALLABLE" 프로시저 -->
+   <!-- statementType="PREPARED"  -->
+   
+   
+   
 </mapper>

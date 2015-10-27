@@ -8,7 +8,7 @@
   		<param-name>xmlPath</param-name>
   		<!-- <param-value>C:\Users\hong\git\GGGMProject2\GGGMProject2\WebContent\WEB-INF\applicationContext.xml</param-value> -->
   		<!-- <param-value>C:\Users\cjw\git\GGGMProject3\GGGMProject3\WebContent\WEB-INF\applicationContext.xml</param-value>-->
-  		<param-value>D:\Users\YYS\git\GGGMProject3\GGGMProject3\WebContent\WEB-INF\applicationContext.xml</param-value>
+  		<param-value>C:\Users\hong\git\GGGMProject3\GGGMProject3\WebContent\WEB-INF\applicationContext.xml</param-value>
   	</init-param>
   </servlet>
   <servlet-mapping><!-- 시작하자마자 .do는 DispatcherServlet을 실행하고 -->
