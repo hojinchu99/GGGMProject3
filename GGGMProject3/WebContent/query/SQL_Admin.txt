@@ -1,0 +1,18 @@
+<-- test Query (로그인 정상 작동 여부 및 회원 등급별 Name 색 변경)-->
+CREATE TABLE testmember(
+id VARCHAR2(30) NOT NULL,
+pwd VARCHAR2(30) NOT NULL,
+name VARCHAR2(30) NOT NULL,
+grade NUMBER(1) CHECK(grade>0 AND grade<=3)
+);
+INSERT INTO testmember VALUES('user','1234','홍길동','1');
+INSERT INTO testmember VALUES('user1','1234','심길동','1');
+INSERT INTO testmember VALUES('ad','1234','김길동','2');
+INSERT INTO testmember VALUES('ad1','1234','박길동','2');
+INSERT INTO testmember VALUES('user2','1234','이길동','1');
+INSERT INTO testmember VALUES('admin','1234','하길동','3');
+INSERT INTO testmember VALUES('admin1','1234','변길동','3');
+INSERT INTO testmember VALUES('ad2','1234','신길동','2');
+INSERT INTO testmember VALUES('user3','1234','강길동','1');
+COMMIT;
+<-- test Query -->
