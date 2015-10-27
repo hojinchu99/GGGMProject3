@@ -20,10 +20,10 @@
                 speed: 500,        // 이동 속도를 설정
                 pager: false,      // 현재 위치 페이징 표시 여부 설정
                 moveSlides: 1,     // 슬라이드 이동시 개수
-                slideWidth: 250,   // 슬라이드 너비
-                minSlides: 4,      // 최소 노출 개수
-                maxSlides: 4,      // 최대 노출 개수
-                slideMargin: 10,    // 슬라이드간의 간격
+                slideWidth: 200,   // 슬라이드 너비
+                minSlides: 3,      // 최소 노출 개수
+                maxSlides: 3,      // 최대 노출 개수
+                slideMargin: 30,    // 슬라이드간의 간격
                 auto: false,        // 자동 실행 여부
                 autoHover: true,   // 마우스 호버시 정지 여부
                 captions: true, // 이미지의 title 속성이 노출된다.
@@ -49,10 +49,10 @@
                 speed: 500,        // 이동 속도를 설정
                 pager: false,      // 현재 위치 페이징 표시 여부 설정
                 moveSlides: 1,     // 슬라이드 이동시 개수
-                slideWidth: 250,   // 슬라이드 너비
-                minSlides: 4,      // 최소 노출 개수
-                maxSlides: 4,      // 최대 노출 개수
-                slideMargin: 10,    // 슬라이드간의 간격
+                slideWidth: 200,   // 슬라이드 너비
+                minSlides: 3,      // 최소 노출 개수
+                maxSlides: 3,      // 최대 노출 개수
+                slideMargin: 30,    // 슬라이드간의 간격
                 auto: false,        // 자동 실행 여부
                 autoHover: true,   // 마우스 호버시 정지 여부
                 captions: true, // 이미지의 title 속성이 노출된다.
@@ -78,10 +78,10 @@
                 speed: 500,        // 이동 속도를 설정
                 pager: false,      // 현재 위치 페이징 표시 여부 설정
                 moveSlides: 1,     // 슬라이드 이동시 개수
-                slideWidth: 250,   // 슬라이드 너비
-                minSlides: 4,      // 최소 노출 개수
-                maxSlides: 4,      // 최대 노출 개수
-                slideMargin: 10,    // 슬라이드간의 간격
+                slideWidth: 200,   // 슬라이드 너비
+                minSlides: 3,      // 최소 노출 개수
+                maxSlides: 3,      // 최대 노출 개수
+                slideMargin: 30,    // 슬라이드간의 간격
                 auto: false,        // 자동 실행 여부
                 autoHover: true,   // 마우스 호버시 정지 여부
                 captions: true, 	// 이미지의 title 속성이 노출된다.
