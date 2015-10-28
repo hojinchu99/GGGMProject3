@@ -30,7 +30,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Dashboard</title>
+        <title>GGGM | Dashboard</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -66,7 +66,7 @@
         <header class="header">
             <a href="main.jsp" class="logo" style="background-color: ${color}">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
-                AdminLTE
+                GGGM
             </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
