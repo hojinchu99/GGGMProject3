@@ -16,8 +16,7 @@
 			session = request.getSession();
 			session.setAttribute("id", id);
 			session.setAttribute("name", d.getName());
-			session.setAttribute("grade", d.getGrade());
-			response.sendRedirect("main.jsp");
+			session.setAttribute("grade", d.getGrade());			
 		} else {
 			result = "NOPWD";
 		}

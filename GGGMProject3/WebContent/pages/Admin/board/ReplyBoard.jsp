@@ -20,7 +20,7 @@
 </head>
 <body>
 	<div class="row">
-		<div class="col-lg-9 col-md-offset-1">
+		<div class="col-lg-11 col-md-offset-1">
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="table-responsive">
