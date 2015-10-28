@@ -31,6 +31,7 @@
     box-shadow: 0 0 5px rgba(0,0,0,0.1), 0 3px 2px rgba(0,0,0,0.1);
 }
 
+
 .form-5 p {
     width: 70%;
     float: left;
@@ -49,27 +50,28 @@
     /* Styles */
     border: none; /* Remove the default border */
     background: white; /* Fallback */
-    background: rgba(255,255,255,0.2);
+    background: rgba(255,255,255,0.25);
     box-shadow: 
-        inset 0 0 10px rgba(255,255,255,0.5);
+        inset 0 0 10px rgba(255,255,255,255);
 
     /* Font styles */
-    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-family: '서울한강체', sans-serif;
     text-indent: 10px;
-    color: #ee4c8d;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
-    font-size: 20px;       
+    color: #DC0F60;
+    text-shadow: 2px 2px 5px white;
+    font-size: 25px;       
 }
 
 .form-5 input[type=text] {
     border-bottom: 1px solid #fff; /* Fallback */
-    border-bottom: 1px solid rgba(255,255,255,0.7);
+    border-bottom: 1px solid rgba(255,255,255,255);
     border-radius: 5px 0 0 0;
 }
 
 .form-5 input[type=password] {
     border-top: 1px solid #CCC; /* Fallback */
-    border-top: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(1,1,1,0.1);
     border-radius: 0 0 0 5px;
 }
 
@@ -86,20 +88,20 @@
 
 .form-5 input::-webkit-input-placeholder {
     color: #fff;
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
-    font-family: 'Handlee', cursive;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.7);
+    font-family: '서울한강체', cursive;
 }
 
 .form-5 input:-moz-placeholder {
     color: #fff;
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
-    font-family: 'Handlee', cursive;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.7);
+    font-family: '서울한강체', cursive;
 }
 
 .form-5 input:-ms-input-placeholder {
     color: #fff;
-    text-shadow: 0 -1px 1px rgba(0,0,0,0.4);
-    font-family: 'Handlee', cursive;
+    text-shadow: 0 -1px 1px rgba(0,0,0,0.7);
+    font-family: '서울한강체', cursive;
 }
 
 .form-5 button {
@@ -111,7 +113,7 @@
     overflow: hidden;
 
     /* Styles */
-    background: rgba(203, 182, 155, 0.5);
+    background: rgba(255, 225, 255, 0.4);
 
     border-radius: 0 5px 5px 0;
     box-shadow:
@@ -131,11 +133,11 @@
     left: -20px;
     font-size: 64px;
     line-height: 109px;
-    color: #8d1645;
+    color: #DC0F60;
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
     filter: alpha(opacity=0);
     opacity: 0;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+    text-shadow: 2px 2px 5px white;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     -ms-transition: all 0.2s ease-out;
@@ -147,11 +149,11 @@
     display: block;
 
     /* Font styles */ 
-    color: #8d1645;
+    color: #DC0F60;
     font-family: 'Montserrat', Arial, sans-serif; 
-    font-size: 20px;
-    text-shadow: 0 1px 0 rgba(255,255,255,0.4);
-
+    font-size: 25px;
+    text-shadow: 2px 2px 5px white;
+    
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     -ms-transform: rotate(-90deg);
@@ -187,7 +189,7 @@
 .form-5 button:focus i {
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
     filter: alpha(opacity=50);
-    opacity: 0.5;
+    opacity: 1;
     left: 0;
     -webkit-transition-delay: 0.2s;
     -moz-transition-delay: 0.2s;

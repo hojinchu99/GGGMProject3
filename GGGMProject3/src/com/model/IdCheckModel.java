@@ -15,6 +15,7 @@ public class IdCheckModel implements Model {
 		int bcheck=SignupDAO.idcheck(id);
 		System.out.println("bcheck:"+bcheck);
 		req.setAttribute("idcheck", 2-bcheck);
+		req.setAttribute("usableId", id);
 		return "/member/idcheck.jsp";
 	}
 
