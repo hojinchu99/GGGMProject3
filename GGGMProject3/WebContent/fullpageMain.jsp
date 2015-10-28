@@ -1,19 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" import="com.dao.*"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<jsp:useBean id="dao" class="com.dao.memberDAO"/>
-<%
-    
-	String strId = request.getParameter("id");
-	String strPwd = request.getParameter("pwd");
-	if(strId!=null){
-		boolean bCheck=dao.idCheck(strId, strPwd);
-		if (bCheck){		
-				session.setAttribute("id", strId);			
-				response.sendRedirect("main.jsp");		
-		}
-	}
-%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -300,14 +286,14 @@ function twojoin()
 					광고를 보는 것만으로<br>돈을 벌 수 있다면?
 				</h3>
 				<section class="main">
-					<form action="fullpageMain.jsp" method="post" name=frmlogin
+					<form action="login.jsp" method="post" id=frmlogin
 						class="form-5 clearfix">
 						<p>
 							<input type="text" id="login" name="id" placeholder="Username">
 							<input type="password" name="pwd" id="password"
 								placeholder="Password">
 						</p>
-						<button type="submit">
+						<button type="button" id="loginBtn">
 							<i class="fa fa-arrow-right"></i> <span>Sign in</span>
 						</button>
 					</form>
@@ -375,14 +361,14 @@ function twojoin()
 					지금까지 없었던 서비스<br>당신이 선두입니다.
 				</h3>
 				<section class="main_1">
-					<form action="fullpageMain.jsp" method="post" name=frmlogin
+					<form action="login.jsp" method="post" id=frmlogin
 						class="form-5 clearfix">
 						<p>
 							<input type="text" id="login" name="id" placeholder="Username">
 							<input type="password" name="pwd" id="password"
 								placeholder="Password">
 						</p>
-						<button type="button" onclick="login">
+						<button type="button" id="loginBtn">
 							<i class="fa fa-arrow-right"></i> <span>Sign in</span>
 						</button>
 					</form>
@@ -413,7 +399,22 @@ function twojoin()
 				width : 800,
 				height : 700
 			});
-		}		
+		}
+		$('#loginBtn').click(function(){
+			var id=$('#login').val();
+			if(id=="")
+			{
+				$('#login').focus();
+				return;
+			}
+			var pwd=$('#password').val();
+			if(pwd=="")
+			{
+				$('#password').focus();
+				return;
+			}
+			$('#frmlogin').submit();				
+		});
 	</script>
 </body>
 </html>

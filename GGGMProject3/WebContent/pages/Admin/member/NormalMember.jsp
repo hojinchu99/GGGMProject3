@@ -1,5 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR" import="com.change.*,com.dao.*,java.util.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<jsp:useBean id="dao" class="com.dao.memberDAO" />
+<%	
+    String id=(String)session.getAttribute("id");
+    
+    List<memberDTO> list=dao.getNormalMemberAllData();
+    String strPage=request.getParameter("page");    
+%>
+<c:set var="list" value="<%=list %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,196 +19,51 @@
 	content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
 	name='viewport'>
 <!-- bootstrap 3.0.2 -->
-<link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/bootstrap.min.css" rel="stylesheet"
+	type="text/css" />
 <!-- font Awesome -->
 <link href="../../../css/font-awesome.min.css" rel="stylesheet"
 	type="text/css" />
 <!-- Ionicons -->
-<link href="../../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
+<link href="../../../css/ionicons.min.css" rel="stylesheet"
+	type="text/css" />
 <!-- Theme style -->
 <link href="../../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
 	<div class="row">
-		<div class="col-lg-9 col-md-offset-1">
+		<div class="col-lg-11 col-md-offset-1">
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="table-responsive">
 						<table class="table table-bordered table-hover">
 							<thead>
-								<tr>									
-									<th>회원번호</th>
-									<th>회원ID</th>
+								<tr>
 									<th>이름</th>
-									<th>가입일</th>
-									<th>최근접속일</th>
-									<th>접속IP</th>
-									<th>Point</th>
+									<th>회원ID</th>
+									<th>생일</th>
+									<th>전화번호</th>
+									<th>성별</th>
+									<th>우편번호</th>
+									<th>주소</th>
+									<th>E-mail</th>
+									<th>수신여부</th>									
 								</tr>
 							</thead>
 							<tbody>
-								<tr>									
-									<td>1</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>								
-									<td>2</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>3</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>								
-									<td>4</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>5</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>6</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-									<tr>									
-									<td>1</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>2</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>3</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>4</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>5</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>								
-									<td>6</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-									<tr>									
-									<td>1</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>2</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>3</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>4</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>									
-									<td>5</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>								
-									<td>6</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
+								<c:forEach var="dto" items="${list}">
+									<tr>
+										<td width="7%">${dto.name}</td>
+										<td width="7%">${dto.id}</td>
+										<td width="10%">${dto.birth}</td>
+										<td width="12%">${dto.tel}</td>
+										<td width="7%">${dto.sex}</td>
+										<td width="9%">${dto.post}</td>
+										<td><small>${dto.addr1}<br>${dto.addr2}</small></td>
+										<td>${dto.email}</td>
+										<td>${dto.emailreceive}</td>										
+									</tr>
+								</c:forEach>
 							</tbody>
 						</table>
 					</div>

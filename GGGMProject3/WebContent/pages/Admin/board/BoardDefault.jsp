@@ -26,7 +26,8 @@
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="table-responsive">
-						<table class="table table-bordered table-hover">
+					FAQ
+						<table class="table table-bordered table-hover">						
 							<thead>
 								<tr>
 									<th><input type="checkbox"></th>
@@ -40,7 +41,7 @@
 									<th>Point</th>
 								</tr>
 							</thead>
-							<tbody>
+							<tbody>								
 								<tr>
 									<td><input type="checkbox"></td>
 									<td>1</td>
@@ -51,153 +52,57 @@
 									<td>2015-10-17</td>
 									<td>211.238.142.27</td>
 									<td>0</td>
-								</tr>
+								</tr>							
+							</tbody>
+						</table>
+						FAQ
+						<table class="table table-bordered table-hover">						
+							<thead>
 								<tr>
-									<td><input type="checkbox"></td>
-									<td>2</td>
-									<td>일반</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
+									<th><input type="checkbox"></th>
+									<th>회원번호</th>
+									<th>회원구분</th>
+									<th>회원ID</th>
+									<th>이름</th>
+									<th>가입일</th>
+									<th>최근접속일</th>
+									<th>접속IP</th>
+									<th>Point</th>
 								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>3</td>
-									<td>일반</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>4</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>5</td>
-									<td>일반</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>6</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
+							</thead>
+							<tbody>								
 								<tr>
 									<td><input type="checkbox"></td>
 									<td>1</td>
-									<td>광고주</td>
+									<td>일반</td>
 									<td>hong</td>
 									<td>홍길동</td>
 									<td>2015-10-17</td>
 									<td>2015-10-17</td>
 									<td>211.238.142.27</td>
 									<td>0</td>
-								</tr>
+								</tr>							
+							</tbody>
+						</table>
+						FAQ
+						<table class="table table-bordered table-hover">						
+							<thead>
 								<tr>
-									<td><input type="checkbox"></td>
-									<td>2</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
+									<th><input type="checkbox"></th>
+									<th>회원번호</th>
+									<th>회원구분</th>
+									<th>회원ID</th>
+									<th>이름</th>
+									<th>가입일</th>
+									<th>최근접속일</th>
+									<th>접속IP</th>
+									<th>Point</th>
 								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>3</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>4</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>5</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>6</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
+							</thead>
+							<tbody>								
 								<tr>
 									<td><input type="checkbox"></td>
 									<td>1</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>2</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>3</td>
 									<td>일반</td>
 									<td>hong</td>
 									<td>홍길동</td>
@@ -205,10 +110,28 @@
 									<td>2015-10-17</td>
 									<td>211.238.142.27</td>
 									<td>0</td>
+								</tr>							
+							</tbody>
+						</table>
+						FAQ
+						<table class="table table-bordered table-hover">						
+							<thead>
+								<tr>
+									<th><input type="checkbox"></th>
+									<th>회원번호</th>
+									<th>회원구분</th>
+									<th>회원ID</th>
+									<th>이름</th>
+									<th>가입일</th>
+									<th>최근접속일</th>
+									<th>접속IP</th>
+									<th>Point</th>
 								</tr>
+							</thead>
+							<tbody>								
 								<tr>
 									<td><input type="checkbox"></td>
-									<td>4</td>
+									<td>1</td>
 									<td>일반</td>
 									<td>hong</td>
 									<td>홍길동</td>
@@ -216,29 +139,36 @@
 									<td>2015-10-17</td>
 									<td>211.238.142.27</td>
 									<td>0</td>
+								</tr>							
+							</tbody>
+						</table>
+						FAQ
+						<table class="table table-bordered table-hover">						
+							<thead>
+								<tr>
+									<th><input type="checkbox"></th>
+									<th>회원번호</th>
+									<th>회원구분</th>
+									<th>회원ID</th>
+									<th>이름</th>
+									<th>가입일</th>
+									<th>최근접속일</th>
+									<th>접속IP</th>
+									<th>Point</th>
 								</tr>
+							</thead>
+							<tbody>								
 								<tr>
 									<td><input type="checkbox"></td>
-									<td>5</td>
-									<td>광고주</td>
+									<td>1</td>
+									<td>일반</td>
 									<td>hong</td>
 									<td>홍길동</td>
 									<td>2015-10-17</td>
 									<td>2015-10-17</td>
 									<td>211.238.142.27</td>
 									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>6</td>
-									<td>관리자</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
+								</tr>							
 							</tbody>
 						</table>
 					</div>

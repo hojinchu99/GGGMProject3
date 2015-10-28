@@ -1,5 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+	pageEncoding="EUC-KR" import="com.change.*,com.dao.*,java.util.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<jsp:useBean id="dao" class="com.dao.memberDAO" />
+<%	
+    String id=(String)session.getAttribute("id");
+    
+    List<memberDTO> list=dao.getNormalMemberAllData();
+    String strPage=request.getParameter("page");    
+%>
+<c:set var="list" value="<%=list %>" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,223 +30,50 @@
 </head>
 <body>
 	<div class="row">
-		<div class="col-lg-9 col-md-offset-1">
+		<div class="col-lg-11 col-md-offset-1">
 			<div class="panel panel-default">
 				<div class="panel-body">
 					<div class="table-responsive">
 						<table class="table table-bordered table-hover">
 							<thead>
-								<tr>
-									<th><input type="checkbox"></th>
-									<th>회원번호</th>
-									<th>회원구분</th>
-									<th>회원ID</th>
+							<tr>
 									<th>이름</th>
-									<th>가입일</th>
-									<th>최근접속일</th>
-									<th>접속IP</th>
-									<th>Point</th>
+									<th>회원ID</th>
+									<th>생일</th>
+									<th>전화번호</th>
+									<th>성별</th>
+									<th>우편번호</th>
+									<th>주소</th>
+									<th>E-mail</th>
+									<th>수신여부</th>
+									<th>회원등급</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>1</td>
-									<td>일반</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>									
-									<td>2</td>
-									<td>일반</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>3</td>
-									<td>일반</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>									
-									<td>4</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>								
-									<td>5</td>
-										<td>일반</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>6</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
+								<c:forEach var="dto" items="${list}">
 									<tr>
-									<td><input type="checkbox"></td>
-									<td>1</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>2</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>3</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>4</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>5</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>6</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-									<tr>
-									<td><input type="checkbox"></td>
-									<td>1</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>2</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>3</td>
-									<td>일반</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>4</td>
-									<td>일반</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>5</td>
-									<td>광고주</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox"></td>
-									<td>6</td>
-									<td>관리자</td>
-									<td>hong</td>
-									<td>홍길동</td>
-									<td>2015-10-17</td>
-									<td>2015-10-17</td>
-									<td>211.238.142.27</td>
-									<td>0</td>
-								</tr>
+										<td width="7%">${dto.name}</td>
+										<td width="7%">${dto.id}</td>
+										<td width="10%">${dto.birth}</td>
+										<td width="12%">${dto.tel}</td>
+										<td width="7%">${dto.sex}</td>
+										<td width="9%">${dto.post}</td>
+										<td><small>${dto.addr1}<br>${dto.addr2}</small></td>
+										<td>${dto.email}</td>
+										<td>${dto.emailreceive}</td>
+										<td><c:choose>
+												<c:when test="${dto.grade==1}">
+									일반회원
+									</c:when>
+												<c:when test="${dto.grade==2}">
+									광고주회원
+									</c:when>
+												<c:otherwise>
+									관리자
+									</c:otherwise>
+											</c:choose></td>
+									</tr>
+								</c:forEach>
 							</tbody>
 						</table>
 					</div>
