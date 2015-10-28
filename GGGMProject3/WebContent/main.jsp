@@ -14,11 +14,12 @@
 	String jsp=mainJSPChange.change(Integer.parseInt(strNo));
 
 	if(d.getGrade()==1){
-		color="black";
+		color="#2F9D27";
+		
 	}else if(d.getGrade()==2){
-		color="blue";
+		color="#A566FF";
 	}else{
-		color="red";
+		color="#E5D85C";
 	}
 
 %>
@@ -60,10 +61,10 @@
         <![endif]-->
      
     </head>
-    <body class="skin-black">
+    <body class="skin-black" >
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="main.jsp" class="logo">
+            <a href="main.jsp" class="logo" style="background-color: ${color}">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 AdminLTE
             </a>
@@ -267,12 +268,12 @@
                             </ul>
                         </li>
                         <!-- User Account: style can be found in dropdown.less -->
-                        <li class="dropdown user user-menu">
+                        <li class="dropdown user user-menu" >
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
                                 <span style="color:${color};">${dao.name }<i class="caret"></i></span>
                             </a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" >
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
                                     <img src="img/avatar3.png" class="img-circle" alt="User Image" />
@@ -308,13 +309,13 @@
                 </div>
             </nav>
         </header>
-        <div class="wrapper row-offcanvas row-offcanvas-left">
+        <div class="wrapper row-offcanvas row-offcanvas-left" >
             <!-- Left side column. contains the logo and sidebar -->
             <aside class="left-side sidebar-offcanvas">
                 <!-- sidebar: style can be found in sidebar.less -->
                 <section class="sidebar">
                     <!-- sidebar menu: : style can be found in sidebar.less -->
-                    <ul class="sidebar-menu">
+                    <ul class="sidebar-menu" >
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-bar-chart-o"></i>
