@@ -119,7 +119,7 @@
       margin: 0;
      
       }
-li {
+#banner_wrap #slide_banner .ad_bottom ul li {
 	list-style: none;
 	font-size: 10pt;
 	padding: 0;
