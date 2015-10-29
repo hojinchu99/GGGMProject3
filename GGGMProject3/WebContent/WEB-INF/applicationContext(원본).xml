@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<!-- main.do가 들어왔을 때 매핑할 클래스 => MainModel -->
+	<bean id="main" class="com.model.MainModel"/><!-- startElement(), endElement() -->
+	<bean id="idcheck" class="com.model.IdCheckModel"/>
+	<bean id="idokay" class="com.model.IdOkayModel"/>
+	<bean id="home" class="com.model.HomeModel"/>
+	<bean id="faq" class="com.model.FaqModel"/>
+</beans>

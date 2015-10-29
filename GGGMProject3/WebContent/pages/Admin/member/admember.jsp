@@ -35,7 +35,7 @@
 		<div class="col-md-offset-1">
 			&nbsp;&nbsp;&nbsp;&nbsp; <a href="member.do">전체회원 | </a> <a
 				href="normalmember.do">일반회원 | </a> <a href="admember.do">광고주회원
-				| </a> <a href="adminmember.do">관리자회원 </a>
+				| </a> <a href="AdminMember.do">관리자회원 </a>
 		</div>
 	</div>
 	<div class="row">

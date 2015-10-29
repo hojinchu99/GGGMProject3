@@ -340,7 +340,7 @@
 									class="fa fa-angle-double-right"></i>FAQ</a></li>
 						</ul></li>
 					<c:choose>
-						<c:when test="${d.grade==2 }">
+						<c:when test="${sessionScope.grade==2 }">
 							<li class="treeview"><a href="#"> <i class="fa fa-edit"></i>
 									<span>±§∞Ì¡÷∫–ºÆ</span> <i class="fa fa-angle-left pull-right"></i>
 							</a>
@@ -353,7 +353,7 @@
 											class="fa fa-angle-double-right"></i>±§∞Ì Ω≈√ª</a></li>
 								</ul></li>
 						</c:when>
-						<c:when test="${d.grade==3 }">
+						<c:when test="${sessionScope.grade==3 }">
 							<li class="treeview"><a href="#"> <i class="fa fa-edit"></i>
 									<span>±§∞Ì¡÷∫–ºÆ</span> <i class="fa fa-angle-left pull-right"></i>
 							</a>
