@@ -6,6 +6,7 @@
   <typeAliases>    
      <typeAlias type="dao.memberDTO" alias="Member"/>
      <typeAlias type="dao.memberAddDTO" alias="MemberAdd"/>
+     <typeAlias type="dao.FaqDTO" alias="Faq"/>
   </typeAliases>
   <environments default="development">
     <environment id="development">
@@ -20,6 +21,7 @@
   </environments>
   <mappers>    
     <mapper resource="dao/Member-mapper.xml"/>
+    <mapper resource="dao/faq-mapper.xml"/>
   </mappers>
 </configuration>
 

@@ -12,6 +12,7 @@
 	<bean id="admember" class="model.ADMemberModel"/>
 	<bean id="normalmember" class="model.NormalMemberModel"/>
 	<bean id="AdminMember" class="model.AdminMemberModel"/>
+	<bean id="faq" class="model.FaqModel"/>
 	
 	<!-- startElement(), endElement() -->	
 </beans><!-- endElement(), endDocument() -->
