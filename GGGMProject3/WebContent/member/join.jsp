@@ -5,6 +5,7 @@
 <head>
 <meta charset="EUC-KR">
 <title>회원가입</title>
+
 <link rel="stylesheet" type="text/css" href="join.css"/>
 <link rel="stylesheet" type="text/css" href="../css/shadowbox.css"/>
 <script type="text/javascript" src="../js/shadowbox.js"></script>
@@ -34,6 +35,7 @@ function postfind()
 }
 </script>
 </head>
+
 <body>
    <div id="wrapper">
     <form id="joinForm" name="join_form">
@@ -41,6 +43,8 @@ function postfind()
     <label for="userid">아이디</label>
     <input type=text name="id" id="userid">
     <input type=button value=중복체크 id="useridBtn" onclick="idcheck()">
+ 
+    
     </p>
     <p>
     <label for="userpwd">비밀번호</label>

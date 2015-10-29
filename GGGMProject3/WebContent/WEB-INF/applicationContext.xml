@@ -6,7 +6,19 @@
  -->
 <beans><!-- startElement() -->
 	<!-- main.do가 들어왔을 때 매핑할 클래스 => MainModel -->
+
 	<bean id="main" class="com.model.MainModel"/><!-- startElement(), endElement() -->
 	<bean id="idcheck" class="com.model.IdCheckModel"/>
 	<bean id="slidebanner" class="com.model.AdListModel"/>
+
+	<bean id="login" class="model.LoginModel"/>
+	<bean id="member" class="model.MemberModel"/>
+	<bean id="main" class="model.MainModel"/>
+	<bean id="admember" class="model.ADMemberModel"/>
+	<bean id="normalmember" class="model.NormalMemberModel"/>
+	<bean id="AdminMember" class="model.AdminMemberModel"/>
+	<bean id="faq" class="model.FaqModel"/>
+	
+	<!-- startElement(), endElement() -->	
+
 </beans><!-- endElement(), endDocument() -->

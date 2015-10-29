@@ -1,4 +1,4 @@
-package com.beans;
+package dao;
 
 import java.util.*;
 
@@ -14,7 +14,7 @@ public class FaqDAO{
 	
 	static{
 		try {
-			Reader reader= Resources.getResourceAsReader("com/common/Config.xml");
+			Reader reader= Resources.getResourceAsReader("common/Config.xml");
 			ssf= new SqlSessionFactoryBuilder().build(reader);
 		} catch (Exception e) {System.out.println(e.getMessage());}
 	}

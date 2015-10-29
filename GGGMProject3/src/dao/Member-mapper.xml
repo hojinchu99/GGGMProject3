@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"     
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- PreparedStatement,ResultSet -->
+<mapper namespace="dao.Member-mapper">
+	
+	<select id="memberIdCount" resultType="int" parameterType="String">
+		SELECT COUNT(*) FROM memberData
+		WHERE id=#{id}
+	</select>
+	<select id="getMemberInfo" resultType="Member" parameterType="String">
+		SELECT * FROM memberData
+		WHERE id=#{id}
+	</select>
+	<select id="getNormalMemberAllData" resultType="Member">
+		SELECT * FROM memberData WHERE grade=1
+	</select>
+	<select id="getMemberAllData" resultType="Member">
+		SELECT * FROM memberData
+	</select>
+	<select id="getADMemberAllData" resultType="Member">
+		SELECT * FROM memberData WHERE grade=2
+	</select>
+	<select id="getAdminMemberAllData" resultType="Member">
+		SELECT * FROM memberData WHERE grade=3
+	</select>
+</mapper>

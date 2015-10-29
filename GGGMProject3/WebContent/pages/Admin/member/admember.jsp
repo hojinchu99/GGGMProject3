@@ -1,15 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR" import="com.change.*,com.dao.*,java.util.*"%>
+	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-<jsp:useBean id="dao" class="com.dao.memberDAO" />
-<%	
-    String id=(String)session.getAttribute("id");
-    
-    List<memberDTO> list=dao.getNormalMemberAllData();
-    String strPage=request.getParameter("page");    
-%>
-<c:set var="list" value="<%=list %>" />
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,18 +12,32 @@
 	content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
 	name='viewport'>
 <!-- bootstrap 3.0.2 -->
-<link href="../../../css/bootstrap.min.css" rel="stylesheet"
-	type="text/css" />
+<link href="../../../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <!-- font Awesome -->
 <link href="../../../css/font-awesome.min.css" rel="stylesheet"
 	type="text/css" />
 <!-- Ionicons -->
-<link href="../../../css/ionicons.min.css" rel="stylesheet"
-	type="text/css" />
+<link href="../../../css/ionicons.min.css" rel="stylesheet" type="text/css" />
 <!-- Theme style -->
 <link href="../../../css/AdminLTE.css" rel="stylesheet" type="text/css" />
 </head>
-<body>
+<body class="skin-black">
+	<div class="row">
+		<div class="col-md-offset-1">
+			<h1>※&nbsp;회원목록</h1>
+			<ol class="breadcrumb">
+				<li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+				<li class="active">회원</li>
+			</ol>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-offset-1">
+			&nbsp;&nbsp;&nbsp;&nbsp; <a href="member.do">전체회원 | </a> <a
+				href="normalmember.do">일반회원 | </a> <a href="admember.do">광고주회원
+				| </a> <a href="AdminMember.do">관리자회원 </a>
+		</div>
+	</div>
 	<div class="row">
 		<div class="col-lg-11 col-md-offset-1">
 			<div class="panel panel-default">
@@ -55,13 +62,13 @@
 									<tr>
 										<td width="7%">${dto.name}</td>
 										<td width="7%">${dto.id}</td>
-										<td width="10%">${dto.birth}</td>
+										<td width="10%"><fmt:formatDate value="${dto.birth }" pattern="yyyy-MM-dd"/></td>
 										<td width="12%">${dto.tel}</td>
 										<td width="7%">${dto.sex}</td>
 										<td width="9%">${dto.post}</td>
 										<td><small>${dto.addr1}<br>${dto.addr2}</small></td>
 										<td>${dto.email}</td>
-										<td>${dto.emailreceive}</td>										
+										<td>${dto.emailreceive}</td>									
 									</tr>
 								</c:forEach>
 							</tbody>

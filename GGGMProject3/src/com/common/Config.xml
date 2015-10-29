@@ -4,7 +4,11 @@
    <properties resource="com/common/db.properties"/>
    <typeAliases>
       <typeAlias type="com.dao.SignupDTO" alias="member"/>
+
       <typeAlias type="com.ad.dao.AdvertiseDTO" alias="adDTO"/>
+
+      <typeAlias type="com.beans.FaqDTO" alias="Faq"/>
+
    </typeAliases>
    <environments default="development">
       <environment id="development">
@@ -19,6 +23,10 @@
    </environments>
    <mappers>
       <mapper resource="com/dao/mapper.xml"/>
+
       <mapper resource="com/ad/dao/ad-mapper.xml"/>
+
+      <mapper resource="com/beans/faq-mapper.xml"/>
+
    </mappers>
 </configuration>
