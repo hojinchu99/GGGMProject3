@@ -1,18 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR" import="java.util.*"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<c:choose>
-<c:when test="${d.grade==1}">
-<c:set var="color" value="black"/>
-</c:when>
-<c:when test="${d.grade==2}">
-<c:set var="color" value="blue"/>
-</c:when>
-<c:otherwise>
-<c:set var="color" value="red"/>
-</c:otherwise>
-</c:choose>
+    pageEncoding="EUC-KR" import="com.change.*,com.dao.*,java.util.*"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<%
+	String strNo=request.getParameter("no");
+    String id=(String)session.getAttribute("id");
+    memberDAO dao=new memberDAO();
+    memberDTO d=dao.getMemberInfo(id);
+    
+    String color=null;
+	if(strNo==null){
+		strNo="0";
+	}
+	String jsp=mainJSPChange.change(Integer.parseInt(strNo));
 
+	if(d.getGrade()==1){
+		color="black";
+	}else if(d.getGrade()==2){
+		color="blue";
+	}else{
+		color="red";
+	}
+
+%>
+<c:set var="jsp" value="<%=jsp %>"/>
+<c:set var="dao" value="<%=d %>"/>
+<c:set var="color" value="<%=color %>"/>
 <!DOCTYPE html>
 <html>
     <head>
