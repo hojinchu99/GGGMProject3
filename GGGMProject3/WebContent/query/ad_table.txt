@@ -13,33 +13,33 @@ CREATE TABLE ad(
 	presentinfo VARCHAR2(50),
 	img VARCHAR2(50) CONSTRAINT ad_nn_img NOT NULL,
 	CONSTRAINT ad_pk_adno PRIMARY KEY(adno),
-	CONSTRAINT ad_fk_adid FOREIGN KEY(adid)
+	CONSTRAINT ad_fk_adid FOREIGN KEY(adid) 
 );
 CREATE SEQUENCE ad_adno_seq START WITH 1 INCREMENT BY 1 NOCYCLE NOCACHE;
 
 INSERT INTO ad(adid,adsubject,msg,pointrange,url,maj_category,sub_category,presentrange,presentinfo,img)
-VALUES(ad_adno_seq, '광고주','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지이름');
+VALUES(ad_adno_seq, '광고주id','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지이름');
 INSERT INTO ad(adid,adsubject,msg,pointrange,url,maj_category,sub_category,presentrange,presentinfo,img)
-VALUES(ad_adno_seq.nextval, '광고주','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
+VALUES(ad_adno_seq.nextval, '광고주id','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
 
 이름');
 INSERT INTO ad(adid,adsubject,msg,pointrange,url,maj_category,sub_category,presentrange,presentinfo,img)
-VALUES(ad_adno_seq.nextval, '광고주','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
+VALUES(ad_adno_seq.nextval, '광고주id','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
 
 이름');
 INSERT INTO ad(adid,adsubject,msg,pointrange,url,maj_category,sub_category,presentrange,presentinfo,img)
-VALUES(ad_adno_seq.nextval, '광고주','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
+VALUES(ad_adno_seq.nextval, '광고주id','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
 
 이름');
 INSERT INTO ad(adid,adsubject,msg,pointrange,url,maj_category,sub_category,presentrange,presentinfo,img)
-VALUES(ad_adno_seq.nextval, '광고주','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
+VALUES(ad_adno_seq.nextval, '광고주id','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
 
 이름');
 INSERT INTO ad(adid,adsubject,msg,pointrange,url,maj_category,sub_category,presentrange,presentinfo,img)
-VALUES(ad_adno_seq.nextval, '광고주','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
+VALUES(ad_adno_seq.nextval, '광고주id','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
 
 이름');
 INSERT INTO ad(adid,adsubject,msg,pointrange,url,maj_category,sub_category,presentrange,presentinfo,img)
-VALUES(ad_adno_seq.nextval, '광고주','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
+VALUES(ad_adno_seq.nextval, '광고주id','광고이름', '메세지','포인트범위','영상주소','메인카테고리','부카테고리','선물범위','선물정보','이미지
 
 이름');
