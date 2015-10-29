@@ -1,63 +1,30 @@
 package com.beans;
-import com.beans.*;
-
-import oracle.jdbc.OracleTypes;
 
 import java.util.*;
-import java.sql.*;
-import javax.sql.*;
-import javax.naming.*;
 
-public class FaqDAO {
-	private Connection conn;
-	private CallableStatement cs;
-	private static FaqDAO dao;
-	public static FaqDAO newInstance(){
-		if(dao==null)
-			dao = new FaqDAO();
-		return dao;
-	}
+import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
+import java.io.*;
+
+public class FaqDAO{
+	private static SqlSessionFactory ssf;
 	
-	public void getConnection(){
+	static{
 		try {
-			Context init = new InitialContext();
-			DataSource ds= (DataSource)init.lookup("java://comp/env/jdbc/oracle");
-			conn=ds.getConnection();
+			Reader reader= Resources.getResourceAsReader("com/common/Config.xml");
+			ssf= new SqlSessionFactoryBuilder().build(reader);
 		} catch (Exception e) {System.out.println(e.getMessage());}
 	}
-	public void disConnection(){
-		try {
-			if(conn!= null) conn.close();
-			if(cs!= null) cs.close();
-		} catch (Exception e) {System.out.println(e.getMessage());}
-	}
-	
-	//값 읽어오기
-	public List<FaqDTO> getAllFaq(){
-		List<FaqDTO> list = new ArrayList<FaqDTO>();
-		try {
-			getConnection();
-			String sql="{CALL getAllFaq(?)}";
-			cs = conn.prepareCall(sql);
-			cs.registerOutParameter(1, OracleTypes.CURSOR);
-			cs.executeUpdate();
-			ResultSet rs=(ResultSet)cs.getObject(1);
-			while(rs.next()){
-				FaqDTO d= new FaqDTO();
-				d.setNo(rs.getInt(1));
-				d.setSubject(rs.getString(2));
-				d.setContent(rs.getString(3));
-				list.add(d);
-			}
-			rs.close();
-					
-		} catch (Exception e) {System.out.println(e.getMessage());}
-		finally{
-			disConnection();
-		}
+	public static List<FaqDTO> faqAllData(){
+		System.out.println("dao안쪽 접근");
+		SqlSession session=ssf.openSession();
+		List<FaqDTO> list=session.selectList("faqAllData");
+		System.out.println("dao안쪽 벗어남");
 		return list;
 	}
-	//값 삭제
 	
-	//값 수정
 }
+

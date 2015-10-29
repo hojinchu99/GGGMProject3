@@ -12,7 +12,7 @@
 	if(strNo==null){
 		strNo="0";
 	}
-	String jsp=mainJSPChange.change(Integer.parseInt(strNo));
+// 	String jsp=mainJSPChange.change(Integer.parseInt(strNo));
 
 	if(d.getGrade()==1){
 		color="black";
@@ -21,9 +21,8 @@
 	}else{
 		color="red";
 	}
-
 %>
-<c:set var="jsp" value="<%=jsp %>"/>
+<%-- <c:set var="jsp" value="<%=jsp %>"/> --%>
 <c:set var="dao" value="<%=d %>"/>
 <c:set var="color" value="<%=color %>"/>
 <!DOCTYPE html>
@@ -349,7 +348,7 @@
 									class="fa fa-angle-double-right"></i>공지사항</a></li>
 							<li><a href="main.jsp?no=8"><i
 									class="fa fa-angle-double-right"></i>QnA</a></li>
-							<li><a href="main.jsp?no=9"><i
+							<li><a href="faq.do"><i
 									class="fa fa-angle-double-right"></i>FAQ</a></li>
 						</ul></li>
 					<c:choose>
