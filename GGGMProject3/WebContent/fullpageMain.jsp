@@ -67,8 +67,8 @@ section.main {
 
 #mainHead {
 	color: white;
-	padding-top: 100px;
-	font-size: 450%;
+	padding-top: 150px;
+	font-size: 500%;
 	text-shadow: 1.5px 1.5px #0A0A00;
 	font-family: 'SeoulHangang', sans-serif;
 }
@@ -283,7 +283,8 @@ function twojoin()
 						onclick="twojoin()" style="position: absolute;top: 530px;right: 590px;">
 				</div>
 				<h3 id="mainHead">
-					광고를 보는 것만으로<br>돈을 벌 수 있다면?
+					광고를 보는 것만으로<br>
+					돈을 벌 수 있다면?
 				</h3>
 				<section class="main">
 					<form action="login.jsp" method="post" id=frmlogin
