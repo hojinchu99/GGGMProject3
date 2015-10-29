@@ -8,4 +8,5 @@
 	<!-- main.do가 들어왔을 때 매핑할 클래스 => MainModel -->
 	<bean id="main" class="com.model.MainModel"/><!-- startElement(), endElement() -->
 	<bean id="idcheck" class="com.model.IdCheckModel"/>
+	<bean id="slidebanner" class="com.model.AdListModel"/>
 </beans><!-- endElement(), endDocument() -->

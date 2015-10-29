@@ -322,7 +322,7 @@
 							class="fa fa-angle-left pull-right"></i>
 					</a>
 						<ul class="treeview-menu">
-							<li><a href="main.jsp?no=1"><i
+							<li><a href="slidebanner.do"><i
 									class="fa fa-angle-double-right"></i>HOT</a></li>
 							<li><a href="main.jsp?no=2"><i
 									class="fa fa-angle-double-right"></i>Local</a></li>
@@ -403,8 +403,10 @@
 
 			<!-- Main content -->
 			<section class="content">
+			
 
-				<jsp:include page="${jsp}"></jsp:include>
+				<%-- <jsp:include page="${jsp}"></jsp:include> --%>
+				<jsp:include page="${jsp1}"></jsp:include>
 
 
 			</section>
