@@ -1,15 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR" import="com.change.*"%>
+	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%
-	String strNo=request.getParameter("pno");
-	if(strNo==null){
-		strNo="0";
-	}
-	String jsp=boardJSPChange.change(Integer.parseInt(strNo));
 
-%>
-<c:set var="jsp" value="<%=jsp %>" />
 <!DOCTYPE html>
 <html>
 <head>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- src/com/controller/WebApplicationContext에서 파싱 -->
+<!-- 
+	SAX방식에서 태그를 읽는 메소드들
+	startDocument() : xml이 시작이 되었음을 알림
+ -->
+<beans><!-- startElement() -->
+	<!-- main.do가 들어왔을 때 매핑할 클래스 => MainModel -->
+	<bean id="login" class="model.LoginModel"/>
+	<bean id="member" class="model.MemberModel"/>
+	<bean id="main" class="model.MainModel"/>
+	<bean id="admember" class="model.ADMemberModel"/>
+	<bean id="normalmember" class="model.NormalMemberModel"/>
+	<bean id="AdminMember" class="model.AdminMemberModel"/>
+	
+	<!-- startElement(), endElement() -->	
+</beans><!-- endElement(), endDocument() -->

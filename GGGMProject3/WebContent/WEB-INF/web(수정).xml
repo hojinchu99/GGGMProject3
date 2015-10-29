@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>GGGMProject2</display-name>
+  <servlet>
+    <servlet-name>controller</servlet-name>
+    <servlet-class>controller.DispatcherServlet</servlet-class>
+  	<init-param><!-- 처음부터 갖고 들어가는 파라미터를 여기에 지정 -->
+  		<param-name>xmlPath</param-name>
+  		<!-- <param-value>C:\Users\hong\git\GGGMProject2\GGGMProject2\WebContent\WEB-INF\applicationContext.xml</param-value> -->
+  		<!-- <param-value>C:\Users\cjw\git\GGGMProject3\GGGMProject3\WebContent\WEB-INF\applicationContext.xml</param-value>-->
+  		<param-value>C:\WebDev\webStudy2\MVCTEST\WebContent\WEB-INF\applicationContext.xml</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping><!-- 시작하자마자 .do는 DispatcherServlet을 실행하고 -->
+    <servlet-name>controller</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

@@ -2,29 +2,17 @@
     pageEncoding="EUC-KR" import="com.change.*,com.dao.*,java.util.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%
-	String strNo=request.getParameter("no");
-    String id=(String)session.getAttribute("id");
-    memberDAO dao=new memberDAO();
-    memberDTO d=dao.getMemberInfo(id);
-    
-    String color=null;
-	if(strNo==null){
-		strNo="0";
-	}
-// 	String jsp=mainJSPChange.change(Integer.parseInt(strNo));
-
-	if(d.getGrade()==1){
-		color="black";
-	}else if(d.getGrade()==2){
-		color="blue";
-	}else{
-		color="red";
-	}
-%>
-<%-- <c:set var="jsp" value="<%=jsp %>"/> --%>
-<c:set var="dao" value="<%=d %>"/>
-<c:set var="color" value="<%=color %>"/>
+<c:choose>
+<c:when test="${sessionScope.grade==1}">
+<c:set var="color" value="black"/>
+</c:when>
+<c:when test="${sessionScope.grade==2}">
+<c:set var="color" value="blue"/>
+</c:when>
+<c:otherwise>
+<c:set var="color" value="red"/>
+</c:otherwise>
+</c:choose>
 <!DOCTYPE html>
 <html>
     <head>
@@ -270,15 +258,15 @@
                         <li class="dropdown user user-menu" >
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span style="color:${color};">${d.name }<i class="caret"></i></span>
+                                <span style="color:${color};">${sessionScope.name }<i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu" >
                                 <!-- User image -->
                                 <li class="user-header bg-light-blue">
                                     <img src="img/avatar3.png" class="img-circle" alt="User Image" />
                                     <p>
-                                        ${d.name}
-                                        <small>${d.birth }</small>
+                                       ${sessionScope.name }
+                                        <small><fmt:formatDate value="${sessionScope.birth }" pattern="yyyy-MM-dd"/></small>
                                     </p>
                                 </li>
                                 <!-- Menu Body -->
@@ -307,7 +295,7 @@
                     </ul>
                 </div>
             </nav>
-        </header>298
+        </header>
         
 	<div class="wrapper row-offcanvas row-offcanvas-left">
 		<!-- Left side column. contains the logo and sidebar -->
@@ -321,22 +309,22 @@
 							class="fa fa-angle-left pull-right"></i>
 					</a>
 						<ul class="treeview-menu">
-							<li><a href="main.jsp?no=1"><i
+							<li><a href="#"><i
 									class="fa fa-angle-double-right"></i>HOT</a></li>
-							<li><a href="main.jsp?no=2"><i
+							<li><a href="#"><i
 									class="fa fa-angle-double-right"></i>Local</a></li>
-							<li><a href="main.jsp?no=3"><i
+							<li><a href="#"><i
 									class="fa fa-angle-double-right"></i>추천</a></li>
 						</ul></li>
 					<li class="treeview"><a href="#"> <i class="fa fa-laptop"></i>
 							<span>내정보</span> <i class="fa fa-angle-left pull-right"></i>
 					</a>
 						<ul class="treeview-menu">
-							<li><a href="main.jsp?no=4"><i
+							<li><a href="#"><i
 									class="fa fa-angle-double-right"></i>환전</a></li>
-							<li><a href="main.jsp?no=5"><i
+							<li><a href="#"><i
 									class="fa fa-angle-double-right"></i>포인트 관리</a></li>
-							<li><a href="main.jsp?no=6"><i
+							<li><a href="#"><i
 									class="fa fa-angle-double-right"></i>경품 관리</a></li>
 						</ul></li>
 					<li class="treeview"><a href="#"> <i
@@ -344,9 +332,9 @@
 							class="fa fa-angle-left pull-right"></i>
 					</a>
 						<ul class="treeview-menu">
-							<li><a href="main.jsp?no=7"><i
+							<li><a href="#"><i
 									class="fa fa-angle-double-right"></i>공지사항</a></li>
-							<li><a href="main.jsp?no=8"><i
+							<li><a href="#"><i
 									class="fa fa-angle-double-right"></i>QnA</a></li>
 							<li><a href="faq.do"><i
 									class="fa fa-angle-double-right"></i>FAQ</a></li>
@@ -357,11 +345,11 @@
 									<span>광고주분석</span> <i class="fa fa-angle-left pull-right"></i>
 							</a>
 								<ul class="treeview-menu">
-									<li><a href="main.jsp?no=10"><i
+									<li><a href="#"><i
 											class="fa fa-angle-double-right"></i>그래프</a></li>
-									<li><a href="main.jsp?no=11"><i
+									<li><a href="#"><i
 											class="fa fa-angle-double-right"></i>광고비용 산출</a></li>
-									<li><a href="main.jsp?no=12"><i
+									<li><a href="#"><i
 											class="fa fa-angle-double-right"></i>광고 신청</a></li>
 								</ul></li>
 						</c:when>
@@ -370,20 +358,20 @@
 									<span>광고주분석</span> <i class="fa fa-angle-left pull-right"></i>
 							</a>
 								<ul class="treeview-menu">
-									<li><a href="main.jsp?no=10"><i
+									<li><a href="#"><i
 											class="fa fa-angle-double-right"></i>그래프</a></li>
-									<li><a href="main.jsp?no=11"><i
+									<li><a href="#"><i
 											class="fa fa-angle-double-right"></i>광고비용 산출</a></li>
-									<li><a href="main.jsp?no=12"><i
+									<li><a href="#"><i
 											class="fa fa-angle-double-right"></i>광고 신청</a></li>
 								</ul></li>
 							<li class="treeview"><a href="#"> <i class="fa fa-table"></i>
 									<span>Admin</span> <i class="fa fa-angle-left pull-right"></i>
 							</a>
 								<ul class="treeview-menu">
-									<li><a href="main.jsp?no=13"><i
+									<li><a href="member.do"><i
 											class="fa fa-angle-double-right"></i>회원관리</a></li>
-									<li><a href="main.jsp?no=14"><i
+									<li><a href="board.do"><i
 											class="fa fa-angle-double-right"></i>게시글 관리</a></li>
 								</ul></li>
 						</c:when>
@@ -396,8 +384,7 @@
 
 		<!-- Right side column. Contains the navbar and content of the page -->
 		<aside class="right-side">
-			<!-- Content Header (Page header) -->
-			
+		
 
 
 			<!-- Main content -->
@@ -426,35 +413,7 @@
 	<!-- jQuery UI 1.10.3 -->
 	<script src="js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
 
-	<%-- <script type="text/javascript">
-		$(function() {
-			var no =
-	<%=strNo%>
-		;
-			var liNo = no % 3;
-			var divByThree = Math.ceil(no / 3);
 
-			if (liNo == 0) {
-				liNo = 3;
-			}
-			$(".sidebar-menu li:nth-child(" + divByThree + ")").addClass(
-					"active");
-			$(
-					".sidebar-menu li:nth-child(" + divByThree
-							+ ") ul li:nth-child(1)").removeClass("active");
-			$(
-					".sidebar-menu li:nth-child(" + divByThree
-							+ ") ul li:nth-child(2)").removeClass("active");
-			$(
-					".sidebar-menu li:nth-child(" + divByThree
-							+ ") ul li:nth-child(3)").removeClass("active");
-			$(
-					".sidebar-menu li:nth-child(" + divByThree
-							+ ") ul li:nth-child(" + liNo + ")").addClass(
-					"active");
-		});
-	</script>
- --%>
 	<!-- Bootstrap -->
 	<script src="js/bootstrap.min.js" type="text/javascript"></script>
 	<!-- Morris.js charts -->
