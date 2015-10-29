@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+ <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%
 	String ad_no="";
 	
@@ -147,6 +148,7 @@ a{
 <body>
     <div id="banner_wrap">
         <ul id="slide_banner" class="banner_margin">
+            <c:forEach begin="" end="" items="">
             <li>
             <div class="ad_top">
                 <a href="ad_index.jsp" target="_blank">
@@ -155,7 +157,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목1
                     		</li>
                     		<li>
                     			영상시간
@@ -170,7 +172,7 @@ a{
                
                
             </li>
-           	
+           	</c:forEach>
             <li>
                <div class="ad_top">
                 <a href="#" target="_blank">
@@ -179,7 +181,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목2
                     		</li>
                     		<li>
                     			영상시간
@@ -199,7 +201,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목3
                     		</li>
                     		<li>
                     			영상시간
@@ -219,7 +221,27 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목4
+                    		</li>
+                    		<li>
+                    			영상시간
+                    		</li>
+                    		<li>
+                    		포인트
+                    		</li>
+                    	</ul>
+                    </div>
+                
+            </li>
+            <li>
+                <div class="ad_top">
+                <a href="#" target="_blank">
+                    <img src="./img/image_test1.jpg"  title="" alt=""></a>
+                    </div>
+                    <div class="ad_bottom">
+                    	<ul>
+                    		<li>
+                    			영상제목5
                     		</li>
                     		<li>
                     			영상시간
@@ -238,7 +260,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목6
                     		</li>
                     		<li>
                     			영상시간
@@ -259,7 +281,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목1
                     		</li>
                     		<li>
                     			영상시간
@@ -278,7 +300,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목2
                     		</li>
                     		<li>
                     			영상시간
@@ -297,7 +319,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목3
                     		</li>
                     		<li>
                     			영상시간
@@ -316,7 +338,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목4
                     		</li>
                     		<li>
                     			영상시간
@@ -335,7 +357,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목5
                     		</li>
                     		<li>
                     			영상시간
@@ -356,7 +378,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목1
                     		</li>
                     		<li>
                     			영상시간
@@ -375,7 +397,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목2
                     		</li>
                     		<li>
                     			영상시간
@@ -394,7 +416,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목3
                     		</li>
                     		<li>
                     			영상시간
@@ -413,7 +435,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목4
                     		</li>
                     		<li>
                     			영상시간
@@ -432,7 +454,7 @@ a{
                     <div class="ad_bottom">
                     	<ul>
                     		<li>
-                    			영상제목
+                    			영상제목5
                     		</li>
                     		<li>
                     			영상시간

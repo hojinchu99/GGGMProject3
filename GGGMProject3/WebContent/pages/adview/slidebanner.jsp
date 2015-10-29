@@ -1,7 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
+<<<<<<< HEAD
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
+=======
+    pageEncoding="EUC-KR"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+>>>>>>> refs/heads/ad
 
 <!DOCTYPE html>
 <html lang="ko">
