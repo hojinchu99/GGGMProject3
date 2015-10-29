@@ -691,9 +691,5 @@
 	<script
 		src="<%=request.getContextPath()%>/js/jquery.bxslider/jquery.bxslider.min.js"></script>
 
-
-
-
-
 </body>
 </html>
